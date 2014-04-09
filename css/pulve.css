@@ -1,0 +1,156 @@
+body {
+	font-family: verdana
+}
+
+.tabs {
+	padding: 0px;
+	margin: 0px;
+}
+
+.tabs li {
+	list-style: none;
+	width: 100%;
+}
+
+.tabs li a {
+	font-size: 1.6em;
+	float: left;
+	background: -webkit-linear-gradient( rgba(60,255,60,0.9), rgba(0,255,0,0.9));
+	background:    -moz-linear-gradient( rgba(60,255,60,0.9), rgba(0,255,0,0.9));
+	background:     -ms-linear-gradient( rgba(60,255,60,0.9), rgba(0,255,0,0.9));
+	background:      -o-linear-gradient( rgba(60,255,60,0.9), rgba(0,255,0,0.9));
+	background:         linear-gradient( rgba(60,255,60,0.9), rgba(0,255,0,0.9));
+	height: 60px;
+	padding-top: 7px; /*permet le centrage vertical*/
+	text-align: center;
+	color: #000;
+	text-decoration: none;
+	width: 25%;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	text-shadow: 0px 1px 0px rgba( 255, 255, 255, 0.2);
+	box-shadow: 0 0 5px rgba( 0, 0, 0, 0.5),
+				0 -1px 0 rgba( 255, 255, 255, 0.4);
+}
+
+.tabs li.active a {
+	font-size: 1.6em;
+	float: left;
+	background: -webkit-linear-gradient( rgba(255,60,60,0.9), rgba(255,0,0,0.9));
+	background:    -moz-linear-gradient( rgba(255,60,60,0.9), rgba(255,0,0,0.9));
+	background:     -ms-linear-gradient( rgba(255,60,60,0.9), rgba(255,0,0,0.9));
+	background:      -o-linear-gradient( rgba(255,60,60,0.9), rgba(255,0,0,0.9));
+	background:         linear-gradient( rgba(255,60,60,0.9), rgba(255,0,0,0.9));
+	height: 60px;
+	padding-top: 7px; /*permet le centrage vertical*/
+	text-align: center;
+	color: #000;
+	text-decoration: none;
+	width: 25%;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	text-shadow: 0px 1px 0px rgba( 255, 255, 255, 0.2);
+	box-shadow: 0 0 5px rgba( 0, 0, 0, 0.5),
+				0 -1px 0 rgba( 255, 255, 255, 0.4);
+	cursor: default;
+}
+
+.tab {
+	border: solid 2px #F6A828;
+	width: 98%;
+	height: 450px;
+	padding: 1%;
+}
+
+.dirty {
+	border: solid 2px red;
+}
+
+/* clearfix from jQueryUI */
+	.ui-helper-clearfix:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+.ui-helper-clearfix {
+	display: inline-block;
+}
+
+/* required comment for clearfix to work in Opera \*/
+* html .ui-helper-clearfix {
+	height: 1%;
+}
+
+.ui-helper-clearfix {
+	display: block;
+}
+
+  /* end clearfix */
+#modal {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	height: 100%;
+	width: 100%;
+	display: none;
+}
+
+#background {
+	background-color: gray;
+	top: 0px;
+	left: 0px;
+	height: 100%;
+	width: 100%;
+	opacity: 0.5;
+}
+
+#box {
+	position: absolute;
+	margin: -55px 0px 0px -105px;
+	top: 50%;
+	left: 50%;
+	border: solid 1px gray;
+	background-color: white;
+	opacity: 1;
+	width: 200px;
+	height: 100px;
+	padding: 10px;
+}
+
+span {
+	color: Red;
+}
+
+label {
+	display: block;
+}
+input {
+	height:30px;
+	width: 98%;
+}
+.readonly {
+	width: 100px;
+	border: 0;
+	font-size: 1.3em;
+	background-color: #FF0000;
+	text-align: center;
+	box-shadow:none;
+	background-image:none;
+	color: #FFF;
+}
+.resultat {
+	margin-left: auto;
+	margin-right: auto;
+	width: 300px;
+	border: 0;
+	font-size: 1.3em;
+	background-color: 0;
+	text-align: center;
+	color: #FF0000;
+}
+p {
+	font-size: 1.1em;
+}	

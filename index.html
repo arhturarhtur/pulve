@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html manifest="pulve.manifest">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-touch-fullscreen" content="yes">
+
+		<title>Réglage d'un pulvérisateur viticole</title>
+		
+		<script type="text/javascript" src="scripts/jquery.min.js"></script>
+		<script type="text/javascript" src="scripts/jquerypp.js"></script>
+		<script type="text/javascript" src="scripts/can.jquery.js"></script>
+		<script type="text/javascript" src="scripts/pause.js"></script>
+		<script type="text/javascript" src="scripts/vitesse.js"> </script>
+		<script type="text/javascript" src="scripts/debit.js"> </script>
+		<script type="text/javascript" src="scripts/volume.js"> </script>
+		<script type="text/javascript" src="scripts/pression.js"> </script>
+
+		<link rel="stylesheet" type="text/css" href="/css/normalize.css">
+		<link rel="stylesheet" type="text/css" href="/css/result-light.css">
+		<link rel="stylesheet" type="text/css" href="css/pulve.css">
+
+		<link rel="apple-touch-icon" href="img/icopulve.png"/>  
+
+	</head>
+	<body>
+		<ul id="tabs" class="ui-helper-clearfix">
+			<li><a href="#tab1"><img src="img/vitesse.png" alt="Vitesse" height="50" width="50"></a></li>
+			<li><a href="#tab2"><img src="img/debit.png" alt="Débit" height="50" width="50"></a></li>
+			<li><a href="#tab3"><img src="img/volume.png" alt="Volume" height="50" width="50"></a></li>
+			<li><a href="#tab4"><img src="img/pression.png" alt="Pression" height="50" width="50"></a></li>
+		</ul>
+		<div id="panels">
+			<form id="tab1" class="tab">
+				<p>Distance parcourue (en m)</p>
+				<p><input type="number" name="distance" placeholder="Distance parcourue (en m)" size="20" onblur="calculvitesse()"></p>
+				<p>Temps (en s)</p>
+				<p><input type="number" name="temps" placeholder="Temps (en s)" size="20" onblur="calculvitesse()"></p>
+				<p class="resultat">Vitesse (en km/h)
+				<input class="readonly" type="text" name="vitesse" size="20" readonly></p>
+			</form>
+			<form id="tab2" class="tab">
+				<p>Volume (en l/ha)</p>
+				<p><input type="number" name="volume" placeholder="Volume (en l/ha)" size="20" onblur="calculdebit()"></p>
+				<p>Largeur de plantation (en m)</p>
+				<p><input type="number" name="largeur" placeholder="largeur de plantation (en m)" size="20" onblur="calculdebit()"></p>
+				<p>Nombre de rangs traités</p>
+				<p><input type="number" name="rangs" placeholder="Nombre de rangs traités" size="20" onblur="calculdebit()"></p>
+				<p>Vitesse (en km/h)</p>
+				<p><input type="number" name="vitesse" placeholder="Vitesse (en km/h)" size="20" onblur="calculdebit()"></p>
+				<p class="resultat">Débit (en l/min)
+				<input class="readonly" type="text" name="debit" size="20" readonly></p>
+			</form>
+			<form id="tab3" class="tab">
+				<p>Débit (en l/min)</p>
+				<p><input type="number" name="debit" placeholder="Débit (en l/min)" size="20" onblur="calculvolume()"></p>
+				<p>Largeur de plantation (en m)</p>
+				<p><input type="number" name="largeur" placeholder="largeur de plantation (en m)" size="20" onblur="calculvolume()"></p>
+				<p>Nombre de rangs traités</p>
+				<p><input type="number" name="rangs" placeholder="Nombre de rangs traités" size="20" onblur="calculvolume()"></p>
+				<p>Vitesse (en km/h)</p>
+				<p><input type="number" name="vitesse" placeholder="Vitesse (en km/h)" size="20" onblur="calculvolume()"></p>
+				<p class="resultat">Volume (en l/ha)
+				<input class="readonly" type="text" name="volume" size="20" readonly></p>
+			</form>
+			<form id="tab4" class="tab">
+				<p>Pression connue (en bars)</p>
+				<p><input type="number" name="pression1" placeholder="Pression connue (en bars)" size="20" onblur="calculpression()"></p>
+				<p>Débit correspondant (en l/min)</p>
+				<p><input type="number" name="debit1" placeholder="Débit correspondant (en l/min)" size="20" onblur="calculpression()"></p>
+				<p>Débit recherché (en l/min)</p>
+				<p><input type="number" name="debit2" placeholder="Débit recherché (en l/min)" size="20" onblur="calculpression()"></p>
+				<p class="resultat">Pression à afficher (en bars)
+				<input class="readonly" type="text" name="pression2" size="20" readonly></p>
+			</form>
+		</div>
+	</body>
+</html>
+
